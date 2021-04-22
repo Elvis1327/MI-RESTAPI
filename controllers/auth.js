@@ -43,7 +43,7 @@ const createUser = async (req = request, res = response) => {
     await userDB.save();
 
     // Respuesta del servidor
-    res.status(201).json({
+    res.json({
         ok: true,
         name: userDB.name,
         token,
