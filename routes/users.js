@@ -1,6 +1,6 @@
 const { check } = require('express-validator');
 const { Router } = require('express');
-const { createUser, logIn, getData } = require( '../controllers/auth' );
+const { createUser, logIn } = require( '../controllers/auth' );
 const { validarCampos } = require('../middlewares/validar-campos');
 
 const router = Router();
@@ -23,7 +23,8 @@ router.post('/join', [
 
 ], logIn)
 
-router.get('/get', getData)
+
+
 
 
 

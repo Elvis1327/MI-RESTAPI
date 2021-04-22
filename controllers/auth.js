@@ -5,13 +5,7 @@ const { getJwt } = require('../helpers/jwt');
 
 
 
-const getData = async (req, res) =>{
-    const usuarios = await Users.find()
 
-    res.json({
-        usuarios
-    })
-}
 
 const createUser = async (req = request, res = response) => {
 
