@@ -21,6 +21,7 @@ class Server {
         this.app.use(cors());
         this.app.use(morgan('dev'));
         this.app.use( '/api/auth', require('../routes/users') );
+        this.app.use( express.static('public'));
     }
 
     // Base de datos
