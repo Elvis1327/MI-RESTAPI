@@ -24,10 +24,6 @@ router.post('/join', [
 ], logIn)
 
 
-
-
-
-
 module.exports = router;
 
 
