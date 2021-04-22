@@ -3,6 +3,16 @@ const bcryptjs = require('bcryptjs');
 const Users = require('../models/users');
 const { getJwt } = require('../helpers/jwt');
 
+
+
+const getData = async (req, res) =>{
+    const usuarios = await Users.find()
+
+    res.json({
+        usuarios
+    })
+}
+
 const createUser = async (req = request, res = response) => {
 
     try {
@@ -99,6 +109,7 @@ const logIn = async (req = request, res = response) => {
 
 module.exports = {
     createUser,
-    logIn
+    logIn,
+    getData
 }
 
