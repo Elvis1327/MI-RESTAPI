@@ -103,7 +103,6 @@ const logIn = async (req = request, res = response) => {
 
 module.exports = {
     createUser,
-    logIn,
-    getData
+    logIn
 }
 
