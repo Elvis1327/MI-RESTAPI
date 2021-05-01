@@ -13,6 +13,9 @@ class Server {
         this.dataBase();
         // Middlewares
         this.middlewares();
+
+        // Rutas
+        this.routes();
     }
 
     // Middlewares
@@ -27,6 +30,11 @@ class Server {
     // Base de datos
     async dataBase(){
         await conectarDB();
+    }
+
+    routes(){
+        this.app.use( '/api/auth', require('../routes/users'));
+        this.app.use( '/api/crud', require('../routes/crud'));
     }
 
     // Connect to Server
