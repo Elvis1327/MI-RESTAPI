@@ -10,7 +10,7 @@ const validarJWT = (req = request, res = response, next) =>{
         if(!token){
             return res.status(400).json({
                 ok: false,
-                msg: 'Debe Headers en la request obligatoriamente'
+                msg: 'Debe Enviar los Headers en la request obligatoriamente'
             });
         };
         const { uid, name } = jwt.verify(token, process.env.SECRET_JWT_SEED);
